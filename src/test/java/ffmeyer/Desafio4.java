@@ -22,8 +22,8 @@ public class Desafio4 {
 	String LOCATOR_NUMERO_CSS ="#numero";
 	String LOCATOR_COMPLEMENTO_CSS ="#complemento";
 	String LOCATOR_BAIRRO_CSS ="#bairro";
-	String LOCATOR_CIDADE = "#cidade";
-	String LOCATOR_ESTADO = "#estado";
+	String LOCATOR_CIDADE_CSS = "#cidade";
+	String LOCATOR_ESTADO_CSS = "#estado";
 	
 	String NEW_DATA_CEP = "01310200";
 	String NEW_DATA_LOGRADOURO ="Avenida: Paulista";
@@ -56,8 +56,8 @@ public void ValidaEndereco() {
 	assertEquals(NEW_DATA_NUMERO,MetodosComuns.getValueAttribute(driver,By.cssSelector(LOCATOR_NUMERO_CSS)));
 	assertEquals(NEW_DATA_COMPLEMENTO,MetodosComuns.getValueAttribute(driver,By.cssSelector(LOCATOR_COMPLEMENTO_CSS)));
 	assertEquals(NEW_DATA_BAIRRO,MetodosComuns.getValueAttribute(driver,By.cssSelector(LOCATOR_BAIRRO_CSS)));
-	assertEquals(NEW_DATA_CIDADE,MetodosComuns.getValueAttribute(driver,By.cssSelector(LOCATOR_CIDADE)));
-	assertEquals(NEW_DATA_ESTADO,MetodosComuns.getValueAttribute(driver,By.cssSelector(LOCATOR_ESTADO)));
+	assertEquals(NEW_DATA_CIDADE,MetodosComuns.getValueAttribute(driver,By.cssSelector(LOCATOR_CIDADE_CSS)));
+	assertEquals(NEW_DATA_ESTADO,MetodosComuns.getValueAttribute(driver,By.cssSelector(LOCATOR_ESTADO_CSS)));
 	
 	MetodosComuns.clicar(driver, By.cssSelector(LOCATOR_BTN_LIMPA_CSS));
 	
@@ -66,8 +66,8 @@ public void ValidaEndereco() {
 	assertEquals("",MetodosComuns.getValueAttribute(driver,By.cssSelector(LOCATOR_NUMERO_CSS)));
 	assertEquals("",MetodosComuns.getValueAttribute(driver,By.cssSelector(LOCATOR_COMPLEMENTO_CSS)));
 	assertEquals("",MetodosComuns.getValueAttribute(driver,By.cssSelector(LOCATOR_BAIRRO_CSS)));
-	assertEquals("",MetodosComuns.getValueAttribute(driver,By.cssSelector(LOCATOR_CIDADE)));
-	assertEquals("",MetodosComuns.getValueAttribute(driver,By.cssSelector(LOCATOR_ESTADO)));
+	assertEquals("",MetodosComuns.getValueAttribute(driver,By.cssSelector(LOCATOR_CIDADE_CSS)));
+	assertEquals("",MetodosComuns.getValueAttribute(driver,By.cssSelector(LOCATOR_ESTADO_CSS)));
 }
 
 

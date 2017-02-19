@@ -15,9 +15,9 @@ public class Desafio1 {
 	WebDriver driver;
 	String BASEURL = "http://eliasnogueira.com/arquivos_blog/selenium/desafio/1desafio/";
 	
-	String LOCATOR_VALOR_1= "#number1";
-	String LOCATOR_VALOR_2= "#number2";
-	String LOCATOR_RESULT = ".form-group > input:nth-child(3)";	
+	String LOCATOR_VALOR_1_CSS = "#number1";
+	String LOCATOR_VALOR_2_CSS = "#number2";
+	String LOCATOR_RESULT_CSS = ".form-group > input:nth-child(3)";	
 	String LOCATOR_ENVIAR_CSS = ".form-group > input:nth-child(4)";
 	
 @Before
@@ -31,9 +31,9 @@ public void setUp() {
 @Test
 public void SomaNumeros() {
 	
-		int valor1 = Integer.parseInt(MetodosComuns.getText(driver, By.cssSelector(LOCATOR_VALOR_1)));
-		int valor2 = Integer.parseInt(MetodosComuns.getText(driver, By.cssSelector(LOCATOR_VALOR_2)));
-		MetodosComuns.escrever(driver, By.cssSelector(LOCATOR_RESULT), Integer.toString(valor1+valor2));		
+		int valor1 = Integer.parseInt(MetodosComuns.getText(driver, By.cssSelector(LOCATOR_VALOR_1_CSS)));
+		int valor2 = Integer.parseInt(MetodosComuns.getText(driver, By.cssSelector(LOCATOR_VALOR_2_CSS)));
+		MetodosComuns.escrever(driver, By.cssSelector(LOCATOR_RESULT_CSS), Integer.toString(valor1+valor2));		
 		MetodosComuns.clicar(driver, By.cssSelector(LOCATOR_ENVIAR_CSS));		
 		MetodosComuns.getWhenVisible(driver, By.cssSelector("#resultado"), 30);
 		assertEquals("CORRETO",driver.findElement(By.cssSelector("#resultado")).getText());			
