@@ -31,7 +31,7 @@ public class Desafio5 {
 @Before
 public void setUp() {
 	
-	System.setProperty("webdriver.gecko.driver", "C:\\Users\\ffmeyer\\Downloads\\lib\\geckodriver-v0.14.0-win64\\geckodriver.exe");
+	System.setProperty("webdriver.gecko.driver", ".\\src\\test\\resources\\geckodriver-v0.14.0-win64.exe");
 	driver = new FirefoxDriver();
 	driver.get(BASEURL);	
 }
